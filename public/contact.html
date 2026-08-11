@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ejJCS5W5qemhzGwWGfKkiJLf1BFuHMLcRs_7ncPz6Q&s=10"
+          alt="image de fleur"
+          class="logo"
+        />
+        <h1 class="title">Avroumi's Flowers</h1>
+        <article class="link">
+          <a href="/index.html">Home</a>
+          <a href="/contact.html" class="active">Contact</a>
+        </article>
+      </nav>
+    </header>
+    <main>
+      <table class="contacts-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Topic</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+
+        <tbody id="contacts-body"></tbody>
+      </table>
+    </main>
+    <footer>
+      <div class="footer">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ejJCS5W5qemhzGwWGfKkiJLf1BFuHMLcRs_7ncPz6Q&s=10"
+          alt="image de fleur"
+          class="logo"
+        />
+
+        <article class="link">
+          <a href="/index.html">Home</a>
+          <a href="/contact.html" class="active">Contact</a>
+        </article>
+      </div>
+      <p>© 2026 Avroumi's and Co</p>
+    </footer>
+    <script>
+      async function getContacts() {
+        const response = await fetch("/contacts");
+        const contacts = await response.json();
+
+        const tbody = document.querySelector("#contacts-body");
+
+        contacts.forEach((contact) => {
+          const tr = document.createElement("tr");
+
+          const nameTd = document.createElement("td");
+          nameTd.textContent = contact.name;
+
+          const emailTd = document.createElement("td");
+          emailTd.textContent = contact.email;
+
+          const topicTd = document.createElement("td");
+          topicTd.textContent = contact.topic;
+
+          const messageTd = document.createElement("td");
+          messageTd.textContent = contact.message;
+
+          tr.append(nameTd, emailTd, topicTd, messageTd);
+
+          tbody.append(tr);
+        });
+      }
+
+      getContacts();
+    </script>
+  </body>
+</html>

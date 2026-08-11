@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ejJCS5W5qemhzGwWGfKkiJLf1BFuHMLcRs_7ncPz6Q&s=10"
+          alt="image de fleur"
+          class="logo"
+        />
+        <h1 class="title">Avroumi's Flowers</h1>
+        <article class="link">
+          <a href="/index.html" class="active">Home</a>
+          <a href="/contact.html">Contact</a>
+        </article>
+      </nav>
+    </header>
+    <main>
+      <h2 class="title-main">Nos produits de saisons</h2>
+      <div class="products">
+        <article class="plant-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6DT4v7jNcInQXzIXwhgK1xI0K-ndEtJqWxiQ8kwvg9Q&s=10"
+            alt="coquelicot red"
+          />
+          <h3 class="name">Coquelicot</h3>
+          <h3 class="price">25</h3>
+          <button class="buy">buy now</button>
+        </article>
+
+        <article class="plant-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG1HY6kHwQyWXogE2ss8KNHwRp3l8T2Exo5DrY8hclSg&s=10"
+            alt="rose pink"
+          />
+          <h3 class="name">rose pink</h3>
+          <h3 class="price">65</h3>
+          <button class="buy">buy now</button>
+        </article>
+
+        <article class="plant-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KOQVR1n2LO_BUUWw0IAXZUpkjgtWD_Jy3CSo966MQA&s=10"
+            alt="white flowers "
+          />
+          <h3 class="name">Petunia</h3>
+          <h3 class="price">35</h3>
+          <button class="buy">buy now</button>
+        </article>
+      </div>
+      <section class="stats">
+        <div class="stat">
+          <h3>120+</h3>
+          <p>Plant varieties waiting for a new home.</p>
+        </div>
+
+        <div class="stat">
+          <h3>4.9/5</h3>
+          <p>Customer rating. Apparently, plants have excellent PR.</p>
+        </div>
+
+        <div class="stat">
+          <h3>850+</h3>
+          <p>Happy plant parents — and counting.</p>
+        </div>
+
+        <div class="stat">
+          <h3>7 Years</h3>
+          <p>Helping people keep plants alive since 2019.</p>
+        </div>
+      </section>
+
+      <section class="contact-info">
+        <div class="contact-card">
+          <h3>📍 Find Us</h3>
+          <p>17 Green Street, Jerusalem</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>🕒 Opening Hours</h3>
+          <p>Sunday – Thursday: 9:00 AM – 7:00 PM</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>📞 Give Us a Call</h3>
+          <p>02-555-0147</p>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <h2>Send us message</h2>
+        <form action="/contact" method="post">
+          <label for="name" class="name">Your name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Avroumi Leplusbeau"
+          />
+
+          <label for="email" class="email">Your email</label>
+          <input
+            type="email"
+            class="email"
+            name="email"
+            id="email"
+            required
+            placeholder="avroumi@gmail.com"
+          />
+
+          <label for="topic" class="topic">What can we help you with?</label>
+          <select name="topic" id="topic">
+            <option value="plant">Plant advice</option>
+            <option value="order">My order</option>
+            <option value="delivery">Delivery</option>
+            <option value="other">Something mysterious</option>
+          </select>
+
+          <label for="message">Your message</label>
+          <textarea name="message" id="message" rows="6" required></textarea>
+          <button type="submit" class="send-btn">Send message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ejJCS5W5qemhzGwWGfKkiJLf1BFuHMLcRs_7ncPz6Q&s=10"
+          alt="image de fleur"
+          class="logo"
+        />
+
+        <article class="link">
+          <a href="/index.html" class="active">Home</a>
+          <a href="/contact.html">Contact</a>
+        </article>
+      </div>
+      <p>© 2026 Avroumi's and Co</p>
+    </footer>
+  </body>
+</html>
